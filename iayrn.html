@@ -1,0 +1,837 @@
+<html lang="en">
+ <head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   iyarn Smart Watch - Feel the Pulses
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: whte;
+        }
+        .header {
+            background-color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .logo img {
+            width: 150px;
+        }
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .main {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .title {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        .product-image img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .feature {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .feature i {
+            font-size: 2em;
+            color: #3b5bdb;
+            margin-bottom: 10px;
+        }
+        .feature h3 {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .feature p {
+            font-size: 1em;
+            color: #666;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .footer p {
+            margin: 0;
+        }
+        .hidden {
+            display: none;
+        }
+        .container {
+            background-color: #324fc5;
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+        .container .title {
+            font-size: 48px;
+            font-weight: bold;
+            color: white;
+        }
+        .container .subtitle {
+            font-size: 24px;
+            margin-top: 10px;
+            color: white;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .images {
+            display: flex;
+            gap: 20px;
+        }
+        .images img {
+            width: 250px;
+            height: 200px;
+            border-radius: 10px;
+        }
+        .map {
+            position: relative;
+            width: 50%;
+            max-width: 500px;
+            margin-left: 50px;
+        }
+        .map img {
+            width: 100%;
+        }
+        .icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .icon {
+            margin: 0 20px;
+            text-align: center;
+        }
+        .icon i {
+            font-size: 40px;
+        }
+        .icon p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        .activity-container {
+            background-color: #0C1125;
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+        .mental-health {
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 50px;
+            margin: 50px auto;
+            border-radius: 10px;
+            max-width: 800px;
+            text-align: center;
+        }
+        .mental-health h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .mental-health p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: white;
+        }
+        .mental-health img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .sleep-patterns {
+            background-color: #fff;
+            color: #333;
+            padding: 50px;
+            margin: 50px auto;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            text-align: center;
+        }
+        .sleep-patterns .text {
+            max-width: 50%;
+            margin: 0 auto;
+        }
+        .sleep-patterns h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .sleep-patterns p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .sleep-patterns img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        .section img {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+        .section .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .section .feature {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            text-align: center;
+        }
+        .section .feature i {
+            font-size: 2em;
+            color: #3b5bdb;
+            margin-bottom: 10px;
+        }
+        .section .feature h3 {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .section .feature p {
+            font-size: 1em;
+            color: #666;
+        }
+                .footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .footer .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .footer .logo img {
+            width: 50px;
+            height: 50px;
+        }
+        .footer .logo p {
+            margin: 10px 0 20px;
+        }
+        .footer .logo button {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .footer .links {
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+        }
+        .footer .links ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer .links ul li {
+            margin: 5px 0;
+        }
+        .footer .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .footer .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+                /* Hero Section */
+.hero {
+    background: url('pulse.jpg') no-repeat center center; /* Add your image URL here */
+    background-size: cover; /* Ensures the image covers the entire section */
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+}
+
+/* Optional: Add a dark overlay to improve text readability */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    z-index: 1;
+}
+/* Hero Content */
+.hero h2, .hero p, .hero button {
+    position: relative;
+    z-index: 2; /* Ensure the content appears above the overlay */
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.hero button {
+    background-color: #ff4500;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    z-index: 2; /* Keep the button above the overlay */
+}
+
+        /* Map Section */
+        .map-section {
+            background: url('hand.jpeg') no-repeat center center fixed; /* Background image */
+            background-size: cover; /* Ensures the background covers the section */
+            padding: 50px 0;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .map-section h3 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: white; /* White color for the title */
+            position: relative;
+            z-index: 2;
+        }
+
+        .map-title {
+          text-align: center;
+          font-size: 24px;
+          font-weight: bold;
+          margin: 20px 0;
+          color: #333;
+          margin-left: 30px;
+       }
+
+        .map-container {
+        display: flex;
+        justify-content: space-between; /* Positions the items at the far edges */
+        align-items: center;
+        padding: 0 50px; /* Adds space around the sides */
+        position: relative;
+        z-index: 2; /* Ensure it stays above the background */
+        }
+
+        /* Data Collection Video */
+        .map-container .data-collection {
+        width: 40%;
+        height: auto;
+        max-width: 500px; /* Ensures the video doesn't grow too large */
+        cursor: pointer;
+        flex-shrink: 0; /* Prevents the video from shrinking */
+        }
+
+
+
+        /* Map Image */
+        .map-container .map {
+            width: 450px;
+            height: 100%; /* Full height of the section */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+            cursor: pointer;
+            border: none;
+        }
+
+
+
+        /* Paragraph text */
+        .map-section p {
+            font-size: 18px;
+            color: white;
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+
+        /* Footer */
+        footer {
+            background-color: #3a3f51;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #1abc9c;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .image-section {
+    width: 100vw;  /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column; /* Stack the images vertically */
+    overflow: hidden; /* Ensure no overflow from the container */
+}
+
+/* Each image fills the entire viewport */
+.full-image {
+    width: 100vw;  /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    display: block;
+    cursor: pointer;
+    border: none; /* Removes any border */
+}
+
+
+
+
+
+
+
+
+   .wearit-section {
+            background: url('bg.png') no-repeat center center fixed;
+            background-size: cover; /* Ensures the image covers the section entirely */
+            padding: 100px 0; /* Adjust the padding for spacing */
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            color: white;
+            min-height: 100vh; /* Ensures the section takes up at least 100% of the viewport height */
+        }
+
+        .wearit-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay */
+            z-index: 1;
+        }
+
+        .wearit-section h3 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Container for the content */
+        .wearit-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Content on the left (Features and Watch) */
+        .features-section {
+            bottom: 20px; /* Positions it 20px from the bottom */
+            left: 20px;  /* Positions it 20px from the left */
+            width: 250px;
+            text-align: left;
+        }
+
+        .features-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-section li {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        /* WearIT UI section on the right */
+        .ui-section {
+            width: 40%;
+            background-color: rgba(34, 46, 60, 0.9); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .ui-section h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .activity {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .stat {
+            background-color: #ff5f5f;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .stat:nth-child(2) {
+            background-color: #6c5ce7;
+        }
+
+        .stat:nth-child(3) {
+            background-color: #f39c12;
+        }
+
+        .summary {
+            font-size: 18px;
+        }
+
+        .summary p {
+            margin: 10px 0;
+        }
+
+        /* Video Element with height control */
+        .ui-section video {
+            width: 100%; /* Make video take the full width of the section */
+            /*height: 750px; /* Set a specific height */
+            object-fit: none; /* Ensures the video covers the set height without distortion */
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        /* White text for paragraph */
+        .wearit-section p {
+            font-size: 18px;
+            color: white;
+            margin-top: 20px;
+        }
+
+
+
+
+
+
+  </style>
+  <script>
+   function showHeartRateMonitor() {
+            document.getElementById('main-content').classList.add('hidden');
+            document.getElementById('heart-rate-monitor').classList.remove('hidden');
+        }
+  </script>
+ </head>
+ <body>
+  <div class="header">
+   <div class="logo">
+    <img alt="iyarn logo" src="iyarn_logo.png"/>
+   </div>
+   <div class="nav">
+    <a href="#">
+     Home
+    </a>
+    <a href="#">
+     Features
+    </a>
+    <a href="#">
+     Pricing
+    </a>
+    <a href="#">
+     Contact
+    </a>
+   </div>
+  </div>
+      <!-- Hero Section -->
+  <section class="hero">
+        <h2>Feel the Pulses in Real-Time </h2>
+        <p>Monitor and analyze health metrics with real-time data collection</p>
+        <button>Start Collecting Data</button>
+        <button>View Real-Time Analytics</button>
+  </section>
+  <!-- Map Section -->
+ <section class="map-section">
+    <h3>Live Data from Location</h3>
+    <div class="map-container">
+        <!-- Data collection image -->
+        <video class="data-collection" controls autoplay muted>
+            <source src="wearables.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <h2 class="map-title">Health Tracking. Every Moment, Everywhere</h2>
+        <div class="data-flow-arrow"></div>
+
+        <!-- Map showing data collection location -->
+        <img class="map" src="wa.jpg" alt="Map showing data collection location">
+    </div>
+    <p>
+        Live data is collected from the location marked on the map and transmitted in real time.
+    </p>
+</section>
+    <section class="wearit-section">
+        <h3>Comprehensive Data Collection & Analysis</h3>
+        <div class="wearit-container">
+            <!-- Left Section: Features and Watch -->
+            <div class="features-section">
+                <ul>
+                    <li>Health Sense™ OS</li>
+                    <li>Clinical Precision</li>
+                    <li>Leading-edge Sensor</li>
+                    <li>ECG Scan for Real-time Data Collection</li>
+                    <li>Activity levels, sleep patterns, step count and much more</li>
+                </ul>
+            </div>
+            
+            <!-- Right Section: WearIT UI with Video -->
+                <!-- Video element with height control -->
+                <video controls autoplay muted>
+                    <source src="wa.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+  <section class="image-section">
+    <img src="rc.png" alt="Image 1">
+  </section>
+  <div id="main-content" class="main">
+   <div class="title">
+    iyarn Smart Watch
+   </div>
+   <div class="subtitle">
+    The ultimate companion for your health and fitness journey
+   </div>
+   <div class="product-image">
+    <img alt="iyarn Smart Watch" src="smartwatch.jpeg"/>
+   </div>
+   <div class="features">
+    <div class="feature" onclick="showHeartRateMonitor()">
+     <i class="fas fa-heartbeat">
+     </i>
+     <h3>
+      Heart Rate Monitor
+     </h3>
+     <p>
+      Keep track of your heart rate 24/7 with our advanced monitoring system.
+     </p>
+    </div>
+    <div class="feature">
+     <i class="fas fa-walking">
+     </i>
+     <h3>
+      Activity Tracking
+     </h3>
+     <p>
+      Monitor your daily activities and stay on top of your fitness goals.
+     </p>
+    </div> 
+    <div class="feature">
+     <i class="fas fa-bell">
+     </i>
+     <h3>
+      Notifications
+     </h3>
+     <p>
+      Receive notifications for calls, messages, and apps right on your wrist.
+     </p>
+    </div>
+   </div>
+  </div>
+  <div id="heart-rate-monitor" class="main hidden">
+   <div class="title">
+    Heart Rate Monitor
+   </div>
+   <div class="subtitle">
+    Real-time heart rate monitoring to keep you informed about your health.
+   </div>
+   <div class="product-image">
+    <img alt="Heart rate monitor interface" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-LmQ09WWGIGwOeeA4ArnRw0x5/user-uJPET5fjNenSso8wCETWVNOp/img-Ks2BtlOfXOLiQJn04iardP03.png"/>
+   </div>
+   <div class="features">
+    <div class="feature">
+     <i class="fas fa-chart-line">
+     </i>
+     <h3>
+      Real-time Data
+     </h3>
+     <p>
+      Get real-time updates on your heart rate and other vital stats.
+     </p>
+    </div>
+    <div class="feature">
+     <i class="fas fa-history">
+     </i>
+     <h3>
+      Historical Data
+     </h3>
+     <p>
+      Access historical data to track your heart rate trends over time.
+     </p>
+    </div>
+    <div class="feature">
+     <i class="fas fa-bell">
+     </i>
+     <h3>
+      Alerts
+     </h3>
+     <p>
+      Receive alerts if your heart rate goes above or below safe levels.
+     </p>
+    </div>
+   </div>
+  </div>
+  <section class="image-section">
+    <img src="multi.png" alt="Image 1">
+  </section>
+  <!-- Image Section -->
+  <section class="image-section">
+    <img src="cci.png" alt="Image 1">
+  </section>
+  <section class="image-section">
+    <img src="doc.png" alt="Image 1">
+  </section>
+  <section class="image-section">
+    <img src="part2.png" alt="Image 1">
+  </section>
+  <section class="image-section">
+    <img src="org.jpg" alt="Image 1">
+  </section>
+  <div class="footer">
+   <div class="logo">
+    <p>
+     iyarn
+    </p>
+    <button>
+     Contact Us
+    </button>
+   </div>
+   <div class="links">
+    <ul>
+     <li>
+      Education
+     </li>
+     <li>
+      Individuals
+     </li>
+    </ul>
+    <ul>
+     <li>
+      Healthcare
+     </li>
+     <li>
+      Social Services
+     </li>
+     <li>
+      Workplaces
+     </li>
+     <li>
+      Resources
+     </li>
+    </ul>
+    <ul>
+     <li>
+      FAQ
+     </li>
+     <li>
+      Tutorials
+     </li>
+     <li>
+      Terms of Use
+     </li>
+     <li>
+      Privacy Policy
+     </li>
+    </ul>
+   </div>
+   <div class="social-icons">
+    <a href="#">
+     <i class="fab fa-facebook-f">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-instagram">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-linkedin-in">
+     </i>
+    </a>
+   </div>
+  </div>
+ </body>
+</html>
+ 
